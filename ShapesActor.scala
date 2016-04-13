@@ -4,13 +4,14 @@ import scala.actors.Actor._
 
 object ShapeDrawingActor extends Actor {
 	def act() {
-		loop {
-			receive {
-				case s: Shape => s.draw()
-				case "exit" => println("exiting..."); exit
-				case x: Any => println("Error: Unknown message! " + x)
-			}
-		}
+		loop(f(f(s)))
+		// loop {
+		// 	receive {
+		// 		case s: Shape => s.draw()
+		// 		case "exit" => println("exiting..."); exit
+		// 		case x: Any => println("Error: Unknown message! " + x)
+		// 	}
+		// }
 	}
 }
 }
